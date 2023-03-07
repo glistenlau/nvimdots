@@ -7,7 +7,7 @@ settings["use_ssh"] = false
 
 -- Set it to false if there are no need to format on save.
 ---@type boolean
-settings["format_on_save"] = true
+settings["format_on_save"] = false
 
 -- Set the format disabled directories here, files under these dirs won't be formatted on save.
 ---@type string[]
@@ -57,13 +57,16 @@ settings["server_formatting_block_list"] = {
 -- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
 ---@type string[]
 settings["lsp_deps"] = {
-	"bashls",
-	"clangd",
-	"html",
-	"jsonls",
-	"lua_ls",
-	"pyright",
-	-- "gopls",
+    "bashls",
+    -- "clangd",
+    "html",
+    "jsonls",
+    "lua_ls",
+    "pyright",
+	"gopls",
+    "tsserver",
+    "sqls",
+    "rust_analyzer",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here
